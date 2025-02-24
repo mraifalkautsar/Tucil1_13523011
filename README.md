@@ -2,6 +2,7 @@
 
 ![logo_repo](https://github.com/user-attachments/assets/69ab5e6a-d451-43ab-96af-2bcf0c1b6acd)
 ![image](https://github.com/user-attachments/assets/a29ef370-1697-4098-81ff-c28b7fdf9a4d)
+
 Muhammad Ra'if Alkautsar / 13523011
 
 IQ Puzzle Pro Solver (Pazurupurosorubā) adalah sebuah program yang mampu untuk memecahkan sebuah papan IQ Puzzler Pro menggunakan algoritma brute force. Program ini menyediakan antarmuka command-line dan graphical.
