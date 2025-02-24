@@ -6,9 +6,9 @@ Muhammad Ra'if Alkautsar / 13523011
 IQ Puzzle Pro Solver (Pazurupurosorubā) adalah sebuah program yang mampu untuk memecahkan sebuah papan IQ Puzzler Pro menggunakan algoritma brute force. Program ini menyediakan antarmuka command-line dan graphical.
 
 ## Cara Kompilasi/Run
-Cara kompilasi: 
+Ada dua mode yang tersedia, yaitu mode GUI dan mode CLI. Main class dari mode GUI adalah MainGUI sedangkan main class dari mode CLI adalah MainCLI
 
-Buka terminal di root folder atau src, lalu ketik perintah berikut:
+Untuk melakukan kompilasi, buka terminal di root folder atau src, lalu ketik perintah berikut:
 
 ### Untuk mengcompile dari root folder ke bin
 > javac --module-path "path-to-javafx\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml -d bin src/*.java
