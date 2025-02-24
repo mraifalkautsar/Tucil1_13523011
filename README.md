@@ -25,13 +25,13 @@ atau
 > javac *.java
 
 ### Cara run untuk mode CLI (pastikan run dari bin supaya input yang berada di /bin/input bisa terbaca):
-> java --module-path "C:\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml MainCLI
+> java MainCLI
 
 ### Cara run untuk mode GUI:
 > java --module-path C:\javafx-sdk-23.0.2\lib --add-modules javafx.controls,javafx.fxml -jar MainGUI
 
-### Cara run jar MainGUI yang berada di /bin:
-> java --module-path C:\javafx-sdk-23.0.2\lib --add-modules javafx.controls,javafx.fxml -jar MainGUI.jar
-
 ### Cara run jar MainCLI yang berada di /bin: 
 > java -jar MainCLI.jar
+
+### Cara run jar MainGUI yang berada di /bin:
+> java --module-path C:\javafx-sdk-23.0.2\lib --add-modules javafx.controls,javafx.fxml -jar MainGUI.jar
