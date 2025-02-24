@@ -13,16 +13,8 @@ Buka terminal di root folder atau src, lalu ketik perintah berikut:
 ### Untuk mengcompile dari root folder ke bin
 > javac --module-path "path-to-javafx\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml -d bin src/*.java
 
-atau 
-
-> javac -d bin src/*.java 
-
 ### Untuk mencompile dari src:
 > javac --module-path "path-to-javafx\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml *.java 
-
-atau 
-
-> javac *.java
 
 ### Cara run untuk mode CLI (pastikan run dari bin supaya input yang berada di /bin/input bisa terbaca):
 > java MainCLI
