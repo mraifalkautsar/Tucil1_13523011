@@ -8,14 +8,14 @@ IQ Puzzle Pro Solver (Pazurupurosorubā) adalah sebuah program yang mampu untuk 
 ## Cara Kompilasi/Run
 Cara kompilasi: 
 Untuk mengcompile dari root folder ke bin
-> javac --module-path "path-to-javafx\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml -d bin src/MainGUI.java (untuk GUI)
+> javac --module-path "path-to-javafx\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml -d bin src/*.java
 atau 
-> javac -d bin src/MainCLI.java (untuk CLI)
+> javac -d bin src/*.java 
 
-Untuk mencompile dari src ke src:
-> javac --module-path "path-to-javafx\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml MainGUI.java (untuk GUI)
+Untuk mencompile dari src:
+> javac --module-path "path-to-javafx\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml *.java 
 atau 
-> javac MainCLI.java (untuk CLI)
+> javac *.java
 
 Cara run untuk mode CLI (pastikan run dari bin supaya input yang berada di /bin/input bisa terbaca):
 > java --module-path "C:\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml MainCLI
