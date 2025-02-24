@@ -182,7 +182,7 @@ public class Board {
         g2d.fillRect(0, 0, width, height);
 
         Map<Object, Color> colorMap = new HashMap<>();
-        Color[] colors = {
+        Color[] fixedColors = {
                 Color.RED,
                 Color.GREEN,
                 Color.YELLOW,
@@ -190,17 +190,23 @@ public class Board {
                 Color.MAGENTA,
                 Color.CYAN,
                 Color.ORANGE,
-                new Color(144, 238, 144),
-                new Color(255, 255, 224),
-                new Color(173, 216, 230),
+                new Color(144, 238, 144),  // Light Green
+                new Color(255, 255, 224),  // Light Yellow
+                new Color(173, 216, 230),  // Light Blue
                 Color.MAGENTA,
-                new Color(224, 255, 255)
+                new Color(224, 255, 255)   // Light Cyan
         };
 
-        int colorIndex = 0;
-        for (char c = 'A'; c <= 'Z'; c++) {
-            colorMap.put(c, colors[colorIndex % colors.length]);
-            colorIndex++;
+        for (int i = 0; i < 12; i++) {
+            char letter = (char) ('A' + i);
+            colorMap.put(letter, fixedColors[i]);
+        }
+
+        for (int i = 0; i < 14; i++) {
+            char letter = (char) ('A' + 12 + i);
+            float hue = (float)(i / 14.0);
+            Color generated = Color.getHSBColor(hue, 0.8f, 0.8f);
+            colorMap.put(letter, generated);
         }
 
         for (int i = 0; i < N; i++) {

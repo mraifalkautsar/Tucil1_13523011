@@ -8,14 +8,10 @@ import javafx.scene.layout.*;
 import javafx.scene.control.*;
 import javafx.geometry.*;
 import javafx.scene.paint.Color;
-import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.*;
-
 import javafx.scene.text.Font;
 
 public class MainGUI extends Application {
@@ -79,7 +75,7 @@ public class MainGUI extends Application {
 
                         Map<Character, Color> colorMap = new HashMap<>();
 
-                        Color[] colors = {
+                        Color[] fixedColors = {
                                 Color.RED,
                                 Color.GREEN,
                                 Color.YELLOW,
@@ -93,10 +89,18 @@ public class MainGUI extends Application {
                                 Color.MAGENTA,
                                 Color.LIGHTCYAN
                         };
-                        int colorIndex = 0;
-                        for (char c = 'A'; c <= 'Z'; c++) {
-                            colorMap.put(c, colors[colorIndex % colors.length]);
-                            colorIndex++;
+
+                        for (int i = 0; i < 12; i++) {
+                            char letter = (char) ('A' + i);
+                            colorMap.put(letter, fixedColors[i]);
+                        }
+
+                        int remaining = 14;
+                        for (int i = 0; i < remaining; i++) {
+                            char letter = (char) ('A' + 12 + i);
+                            double hue = (i * 360.0) / remaining;
+                            Color generated = Color.hsb(hue, 0.8, 0.8);
+                            colorMap.put(letter, generated);
                         }
 
                         for (int i = 0; i < data.N; i++) {

@@ -10,7 +10,7 @@ public class MainCLI {
         while (true) {
             System.out.print("Masukkan nama file input: ");
             fileName = scanner.nextLine();
-            inputFile = new File(fileName);
+            inputFile = new File("../bin/input", fileName);
 
             if (inputFile.exists() && inputFile.isFile()) {
                 break;
